@@ -1,0 +1,27 @@
+<ion-view title="ENCICLOPEDIA" >
+  <ion-content class="buscar">
+
+    <div class="row" >
+      <div class="col col-30">
+        <img class="imm" src="../img/pokedexu.png">
+      </div>
+    </div>
+    <div class="row" >
+      <div class="col col-30">
+        <input ng-model="Buscar_poke">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row" ng-repeat="poke in pokedexB|filter:Buscar_poke">
+        <div class="col col-100">
+          <div class="cuadro cdr">
+            <img class="im" src="{{poke.data.sprites.front_default}}">
+            <p class="cuadro" >{{poke.data.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
